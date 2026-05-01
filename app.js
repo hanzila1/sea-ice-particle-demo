@@ -123,6 +123,8 @@ const map = new maplibregl.Map({
   zoom: 2.4
 });
 
+map.addControl(new maplibregl.NavigationControl(), 'top-right');
+
 // Clear trails when map moves so particles re-project correctly
 map.on('movestart', () => ctx.clearRect(0, 0, canvas.width, canvas.height));
 
