@@ -44,7 +44,7 @@ function setStatus(msg, isError = false) {
 // ── Build the TiTiler URL for a given year/month ──────────────────────────────
 function buildImageUrl(year, month) {
   const temporal = `${year}-${month}-16T18:00:00Z`;
-  return '/titiler/xarray/bbox/-180.0,-90.0,180.0,90.0.png'
+  return 'https://openveda.cloud/api/titiler-cmr/xarray/bbox/-180.0,-90.0,180.0,90.0.png'
     + `?collection_concept_id=${COLLECTION}`
     + '&variables=SIeice&variables=SInice'
     + `&temporal=${encodeURIComponent(temporal)}`
